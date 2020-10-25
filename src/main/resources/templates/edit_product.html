@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Product</title>
+</head>
+<body>
+<div align="center">
+    <form action="#" th:action="@{/save}" th:object="${product}" method="post">
+        <table>
+            <tr>
+                <td>Product Id:</td>
+                <td><input type="text" th:field="*{id}" readonly="readonly" /></td>
+            </tr>
+            <tr>
+                <td>Product Name:</td>
+                <td><input type="text" th:field="*{name}" /></td>
+            </tr>
+
+            <tr>
+                <td>Desc:</td>
+                <td><input type="text" th:field="*{description}" /></td>
+            </tr>
+
+            <tr>
+                <td>Image:</td>
+                <td><input type="text" th:field="*{image}" /></td>
+            </tr>
+
+            <tr>
+                <td>Price:</td>
+                <td><input type="text" th:field="*{price}" /></td>
+            </tr>
+
+            <tr class="form-group">
+                <label>Brand</label>
+                <select th:field="*{brand.id}" class="form-control">
+                    <option
+                            th:selected="${product.getBrand() != null && product.getBrand().getId() == b.getId()}"
+                            th:each="b : ${brand}"
+                            th:value="${b.getId()}"
+                            th:text="${b.getName()}">
+                    </option>
+                </select>
+            </tr>
+
+            <tr class="form-group">
+                <label>Category</label>
+                <select th:field="*{category.id}" class="form-control">
+                    <option
+                            th:selected="${product.getCategory() != null && product.getCategory().getId() == c.getId()}"
+                            th:each="c : ${category}"
+                            th:value="${c.getId()}"
+                            th:text="${c.getName()}">
+                    </option>
+                </select>
+            </tr>
+
+
+
+            <tr><td><button type="submit">Save</button></td></tr>
+        </table>
+
+    </form>
+</div>
+</body>
+</html>
