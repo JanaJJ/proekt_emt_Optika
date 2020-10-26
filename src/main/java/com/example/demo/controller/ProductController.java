@@ -78,7 +78,7 @@ public class ProductController {
         model.addAttribute("category",category);
         List<Brand> brand = this.brandService.findAll();
         model.addAttribute("brand",brand);
-        return "new_p";
+        return "showProductWimage";
     }
     //zacuvaj za sonce
     @RequestMapping(value = "/save",method = RequestMethod.POST)
@@ -87,6 +87,12 @@ public class ProductController {
         return "redirect:/dioptric";
     }
 
+    @RequestMapping(value = "/saveImage",method = RequestMethod.POST)
+    public String saveWithImage(@RequestParam("file") MultipartFile file,@RequestParam("id")Long id,@RequestParam("pname")String name,@RequestParam("desc")String description,
+                                @RequestParam("price")Long price){
+        productService.saveProductToDB(file,id, name, description,price);
+        return "redirect:/dioptric";
+    }
 
 
     @RequestMapping("/edit/C/{id}")
@@ -171,12 +177,7 @@ public class ProductController {
     }
 
 
-    @RequestMapping(value = "/saveImage",method = RequestMethod.POST)
-    public String saveWithImage(@RequestParam("file") MultipartFile file,@RequestParam("id")Long id,@RequestParam("pname")String name,@RequestParam("desc")String description,
-    @RequestParam("price")Long price){
-        productService.saveProductToDB(file,id, name, description,price);
-        return "redirect:/";
-    }
+
 
 
  /*

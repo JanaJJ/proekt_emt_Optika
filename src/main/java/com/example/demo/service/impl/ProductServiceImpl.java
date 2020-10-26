@@ -31,6 +31,7 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public void saveProductToDB(MultipartFile file,Long id, String name, String description, Long price) {
         Product product=new Product();
+        product.setId(id);
         String fileName= StringUtils.cleanPath(file.getOriginalFilename());
         if(fileName.contains(".."))
         {
@@ -42,9 +43,8 @@ public class ProductServiceImpl implements ProductService {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        product.setDescription(description);
-        product.setId(id);
         product.setName(name);
+        product.setDescription(description);
         product.setPrice(price);
         this.productRepository.save(product);
     }

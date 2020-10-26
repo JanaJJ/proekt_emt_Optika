@@ -115,6 +115,7 @@
                                     <img src="../static/img/diopter.jpg" alt="">
                                     <div class="menu_content">
                                         <h4  th:text="${p.getName()}"></h4>
+                                        <h6 th:text="${p.getDescription()}"></h6>
                                         <p th:text="${p.getBrand() != null} ? ${p.getBrand().getName()} : 'No Brand'"></p>
                                         <p th:text="${p.getCategory() != null} ? ${p.getCategory().getName()} : 'No Category'"></p>
                                         <hr class="w-100">
