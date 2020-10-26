@@ -168,18 +168,6 @@ public class ProductController {
 
 
     //////////////////////////////////////////////////////////////////////////
-
-    @RequestMapping("/{id}")
-    public String findbyId(Model model ,@PathVariable Long id){
-       Product products=productService.findProductbyId(id);
-       model.addAttribute("products",products);
-        return "index";
-    }
-
-
-
-
-
  /*
  @RequestMapping("/brand/{id}")
     public String brand(Model model,@PathVariable String id){
@@ -196,10 +184,6 @@ public class ProductController {
         return "index";
     }
 
-
-
-
-
  @RequestMapping("/{brandId}")
     public String showbyBrand(Model model ,@PathVariable Long brandId){
         List<Product> products=productService.findAllByBrand(brandId);
@@ -211,6 +195,16 @@ public class ProductController {
         Product products=productService.findProductbyId(categoryId);
         model.addAttribute("products",products);
         return "index";
-    } */
+    }
+
+
+    @RequestMapping("/{id}")
+    public String findbyId(Model model ,@PathVariable Long id){
+       Product products=productService.findProductbyId(id);
+       model.addAttribute("products",products);
+        return "index";
+    }
+
+    */
 
 }

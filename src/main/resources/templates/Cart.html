@@ -12,26 +12,44 @@
     <link rel="icon" href="img/core-img/favicon.ico">
     <link href="/style.css" rel="stylesheet">
     <link href="/css/responsive/responsive.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+<style>
+    /*dropdown*/
+    .dropdown {position: relative;display: inline-block;}
+    .dropdown-content {display: none;position: absolute;background-color: #f1f1f1;min-width: 160px;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);z-index: 1;}
+    .dropdown-content a {color: sandybrown;padding: 12px 16px;text-decoration: none;display: block;}
+    .dropdown-content a:hover {background-color: #ddd;}
+    .dropdown:hover .dropdown-content {display: block;}
+    /*dropdown*/
+    /*footer*/
+    .footer-links{color: #fff3cd}
+    .footer-links:hover{color: saddlebrown}
+    .fa {color: saddlebrown}
+    .text-uppercase{color: saddlebrown}
+    /*footer*/
+    /*body*/
+    .voved {position:relative;width: 50%;}
+    .image {display: block;width: 100%;height: auto;}
+    .overlay {position: absolute;bottom: 0;left: 0;right: 0;background-color: rgba(255, 110, 25, 0.7);;overflow: hidden;width: 100%;height: 0;transition: .5s ease;}
+    .voved:hover .overlay {height: 100%;}
+    .text {color: white;font-size: 20px;position: absolute;top: 50%;left: 50%;-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);text-align: center;}
+    body {font-family: 'Montserrat', sans-serif;color: #333;}
+    #myTabContent {margin-top: 50px;}
+    .menu_tab {width: auto;margin: 0 auto;}
+    .nav-item a {color: #ffc107;}
+    .menu_tab .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {color: #FF5E18;border-color: #FF5E18;}
+    .single_menu_list {position: relative;padding-left: 250px;margin-bottom: 110px;}
+    .single_menu_list img {max-width: 45%;position: absolute;left: 0px;top: 0;padding: 3px;border-radius: 50%;transition: .4s}
+    .single_menu_list:hover img {border-radius: 0;transition: .4s}
+    .single_menu_list h4 {font-size: 20px;border-bottom: 1px;padding-bottom: 15px;margin-bottom: 10px;color: saddlebrown}
+    /*body*/
+</style>
 <body>
-<div class="caviar-search-form d-flex align-items-center">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="search-close-btn" id="closeBtn">
-                    <i class="pe-7s-close-circle" aria-hidden="true"></i>
-                </div>
-                <form action="#" method="get">
-                    <input type="search" name="caviarSearch" id="search" placeholder="Search Your Favourite Dish ...">
-                    <input type="submit" class="d-none" value="submit">
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
-
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <!--Header-->
 <nav class="navbar navbar-expand-lg navbar-light " style="background-color: orange">
     <a class="navbar-brand text-white font-weight-lighter" href="Home.html">Oптика ТРИ</a>
