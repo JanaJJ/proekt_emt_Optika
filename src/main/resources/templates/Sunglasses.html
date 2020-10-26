@@ -115,7 +115,7 @@
                                     <img src="../static/img/diopter.jpg" alt="">
                                     <div class="menu_content">
                                         <h4  th:text="${p.getName()}"></h4>
-                                        <h6 th:text="${p.getDescription()}"></h6>
+                                        <h6 style="color: #ffc107" th:text="${p.getDescription()}"></h6>
                                         <p th:text="${p.getBrand() != null} ? ${p.getBrand().getName()} : 'No Brand'"></p>
                                         <p th:text="${p.getCategory() != null} ? ${p.getCategory().getName()} : 'No Category'"></p>
                                         <hr class="w-100">
@@ -137,6 +137,7 @@
                                     <img src="../static/img/diopter.jpg" alt="">
                                     <div class="menu_content">
                                         <h4  th:text="${p.getName()}"></h4>
+                                        <h6 style="color: #ffc107" th:text="${p.getDescription()}"></h6>
                                         <p th:text="${p.getBrand() != null} ? ${p.getBrand().getName()} : 'No Brand'"></p>
                                         <p th:text="${p.getCategory() != null} ? ${p.getCategory().getName()} : 'No Category'"></p>
                                         <hr class="w-100">
@@ -158,6 +159,7 @@
                                     <img src="../static/img/diopter.jpg" alt="">
                                     <div class="menu_content">
                                         <h4  th:text="${p.getName()}"></h4>
+                                        <h6 style="color: #ffc107" th:text="${p.getDescription()}"></h6>
                                         <p th:text="${p.getBrand() != null} ? ${p.getBrand().getName()} : 'No Brand'"></p>
                                         <p th:text="${p.getCategory() != null} ? ${p.getCategory().getName()} : 'No Category'"></p>
                                         <hr class="w-100">
@@ -199,16 +201,16 @@
                 <h6 class="text-uppercase font-weight-lighter">Очила</h6>
                 <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p>
-                    <a class="footer-links" href="Sunglasses.html">Очила за Сонце</a>
+                    <a class="footer-links" href="/sunglasses">Очила за Сонце</a>
                 </p>
                 <p>
-                    <a class="footer-links" href="Dioptricglasses.html">Диоптриски Очила</a>
+                    <a class="footer-links" href="/dioptric">Диоптриски Очила</a>
                 </p>
                 <p>
-                    <a class="footer-links" href="ChildrenGlasses.html">Очила за деца</a>
+                    <a class="footer-links" href="/children">Очила за деца</a>
                 </p>
                 <p>
-                    <a class="footer-links" href="ContactLenses.html">Леќи</a>
+                    <a class="footer-links" href="/lenses">Леќи</a>
                 </p>
             </div>
             <!-- Grid column -->
@@ -218,10 +220,10 @@
                 <h6 class="text-uppercase font-weight-lighter">Брзи Линкови</h6>
                 <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p>
-                    <a class="footer-links" href="Home.html">Почетна</a>
+                    <a class="footer-links" href="/home">Почетна</a>
                 </p>
                 <p>
-                    <a class="footer-links" href="AboutUs.html">За Нас</a>
+                    <a class="footer-links" href="/us">За Нас</a>
                 </p>
                 <p>
                     <a class="footer-links" href="Cart">Кошничка</a>

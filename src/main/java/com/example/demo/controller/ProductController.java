@@ -78,7 +78,7 @@ public class ProductController {
         model.addAttribute("category",category);
         List<Brand> brand = this.brandService.findAll();
         model.addAttribute("brand",brand);
-        return "showProductWimage";
+        return "new_p";
     }
     //zacuvaj za sonce
     @RequestMapping(value = "/save",method = RequestMethod.POST)
