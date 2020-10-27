@@ -37,6 +37,12 @@ public class ProductController {
         return "AboutUs";
     }
 
+    //vrati cart
+    @RequestMapping("/cart")
+    public String viewCart(){
+        return "Cart";
+    }
+
     //vrati gi site dioptriski
     @RequestMapping("/dioptric")
     public String viewAllDioptric(Model model){
@@ -80,9 +86,9 @@ public class ProductController {
         model.addAttribute("brand",brand);
         return "new_p";
     }
-    //zacuvaj za sonce
+    //zacuvaj za diopter
     @RequestMapping(value = "/save",method = RequestMethod.POST)
-    public String saveForSunglasses(@ModelAttribute("product") Product product){
+    public String saveForDiopter(@ModelAttribute("product") Product product){
         productService.saveProduct(product);
         return "redirect:/dioptric";
     }
@@ -95,6 +101,7 @@ public class ProductController {
     }
 
 
+    //edit za deca
     @RequestMapping("/edit/C/{id}")
     public ModelAndView editNewProductforChildren(Model model, @PathVariable(name="id")Long id){
         ModelAndView mav=new ModelAndView("edit_product");
@@ -106,6 +113,7 @@ public class ProductController {
         model.addAttribute("brand",brand);
         return mav;
     }
+    //edit za leki
     @RequestMapping("/edit/L/{id}")
     public ModelAndView editNewProductForLenses(Model model, @PathVariable(name="id")Long id){
         ModelAndView mav=new ModelAndView("edit_product");
@@ -118,6 +126,7 @@ public class ProductController {
         return mav;
     }
 
+    //edit za diopter
     @RequestMapping("/edit/D/{id}")
     public ModelAndView editNewProductForDioptric(Model model, @PathVariable(name="id")Long id){
         ModelAndView mav=new ModelAndView("edit_product");
@@ -129,6 +138,7 @@ public class ProductController {
         model.addAttribute("brand",brand);
         return mav;
     }
+    //edit za sonce
     @RequestMapping("/edit/S/{id}")
     public ModelAndView editNewProductForSunglasses(Model model, @PathVariable(name="id")Long id){
         ModelAndView mav=new ModelAndView("edit_product");
